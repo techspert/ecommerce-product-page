@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechGear Pro - Product Showcase</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">TechGear Pro</div>
+            <div class="cart-icon">
+                <i class="fas fa-shopping-cart"></i>
+                <span class="cart-count">0</span>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <div class="product-container">
+            <div class="product-gallery">
+                <img src="/api/placeholder/600/400" alt="Wireless Headphones" class="main-image" id="mainImage">
+                <div class="thumbnail-container">
+                    <img src="/api/placeholder/80/80" alt="Thumbnail 1" class="thumbnail" onclick="changeImage(0)">
+                    <img src="/api/placeholder/80/80" alt="Thumbnail 2" class="thumbnail" onclick="changeImage(1)">
+                    <img src="/api/placeholder/80/80" alt="Thumbnail 3" class="thumbnail" onclick="changeImage(2)">
+                    <img src="/api/placeholder/80/80" alt="Thumbnail 4" class="thumbnail" onclick="changeImage(3)">
+                </div>
+            </div>
+            <div class="product-info">
+                <p class="category">Audio</p>
+                <h1 class="product-title">Premium Wireless Headphones</h1>
+                <p class="price">
+                    $149.99
+                    <span class="original-price">$199.99</span>
+                    <span class="discount">25% OFF</span>
+                </p>
+                <p class="description">
+                    Experience unparalleled sound quality with our premium wireless headphones. 
+                    Featuring active noise cancellation, 30-hour battery life, and comfortable 
+                    over-ear design for extended listening sessions. Perfect for music enthusiasts 
+                    and professionals alike.
+                </p>
+                <div class="quantity-selector">
+                    <button class="quantity-btn" onclick="updateQuantity(-1)">-</button>
+                    <span class="quantity" id="quantity">1</span>
+                    <button class="quantity-btn" onclick="updateQuantity(1)">+</button>
+                </div>
+                <button class="add-to-cart" onclick="addToCart()">
+                    <i class="fas fa-shopping-cart"></i>
+                    Add to Cart
+                </button>
+            </div>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
